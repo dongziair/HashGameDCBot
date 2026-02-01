@@ -1,0 +1,14 @@
+[Unit]
+Description=Discord Faucet Auto Claim Script
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/user/hashgame
+ExecStart=/home/user/hashgame/.venv/bin/python /home/user/hashgame/main.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
